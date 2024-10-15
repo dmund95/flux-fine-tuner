@@ -342,6 +342,10 @@ def train(
     if not trigger_word:
         del train_config["config"]["process"][0]["trigger_word"]
 
+    # if segment_clothes:
+    #     segmentor = Segmentor()
+    #     segmentor.segment_clothes(INPUT_DIR)
+
     captioner = Captioner()
     if autocaption and not captioner.all_images_are_captioned(INPUT_DIR):
         captioner.load_models()
