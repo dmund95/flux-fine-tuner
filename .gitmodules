@@ -4,3 +4,6 @@
 [submodule "LLaVA"]
 	path = LLaVA
 	url = git@github.com:haotian-liu/LLaVA.git
+[submodule "Grounded-SAM"]
+	path = Grounded-SAM
+	url = git@github.com:IDEA-Research/Grounded-Segment-Anything.git
