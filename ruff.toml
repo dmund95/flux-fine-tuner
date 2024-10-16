@@ -28,6 +28,7 @@ exclude = [
     "venv",
     "ai-toolkit",
     "LLaVA",
+    "Grounded-SAM",
 ]
 
 # Same as Black.

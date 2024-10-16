@@ -8,6 +8,7 @@
     "**/__pycache__",
     "ai-toolkit",
     "LLaVA",
+    "Grounded-SAM"
   ],
 
   "ignore": [
@@ -30,6 +31,7 @@
       "root": ".",
       "extraPaths": [
         "ai-toolkit",
+        "Grounded-SAM",
         "LLaVA"
       ]
     },

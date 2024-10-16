@@ -114,6 +114,9 @@ def train(
     autocaption: bool = Input(
         description="Automatically caption images using Llava v1.5 13B", default=True
     ),
+    segment_clothes: bool = Input(
+        description="Automatically segment clothes using Grounded-SAM", default=True
+    ),
     autocaption_prefix: str = Input(
         description="Optional: Text you want to appear at the beginning of all your generated captions; for example, ‘a photo of TOK, ’. You can include your trigger word in the prefix. Prefixes help set the right context for your captions, and the captioner will use this prefix as context.",
         default=None,
@@ -345,7 +348,7 @@ def train(
 
     if segment_clothes:
         segmentor = Segmentor()
-        segmentor.segment_clothes(INPUT_DIR)
+        segmentor.segment_images(INPUT_DIR)
 
     captioner = Captioner()
     if autocaption and not captioner.all_images_are_captioned(INPUT_DIR):
